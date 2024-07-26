@@ -6,6 +6,8 @@
     xmlns:local="clr-namespace:cadastross"
     Shell.FlyoutBehavior="Disabled"
     Title="cadastross">
+ 
+     
 
     <ShellContent
         Title="Home"

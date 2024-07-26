@@ -1,0 +1,31 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cadastross.TeladeMaterial"> 
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+
+        <SearchBar Grid.Row="0" Placeholder="Pesquisar 
+ materiais" />
+
+        <Label Grid.Row="1" Text="Lista de Materiais" HorizontalTextAlignment="Center" FontSize="Large" />
+
+        <ListView Grid.Row="1" ItemsSource="{Binding ListaDeMateriais}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding .}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <Grid Grid.Row="0" Grid.Column="1" HorizontalOptions="End">
+            <Button Text="" />
+            <Button Text="+" />
+            <Button Text="-" />
+            <Button Text="" />
+        </Grid>
+    </Grid>
+</ContentPage>
