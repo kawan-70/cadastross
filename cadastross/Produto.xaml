@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cadastross.Produto"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10">
+
+            <Label Text="tela inicial dos produtos"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start" />
+
+            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Start">
+                <SearchBar Placeholder="facção do beramar"
+                           WidthRequest="250"/>
+                <Button Text="✎"
+                        FontSize="18"
+                        WidthRequest="50"/>
+                <Button Text="➕"
+                        FontSize="18"
+                        WidthRequest="50"/>
+                <Button Text="➖"
+                        FontSize="18"
+                        WidthRequest="50"/>
+                <Button Text="🏠"
+                        FontSize="18"
+                        WidthRequest="50"/>
+            </HorizontalStackLayout>
+
+            <Label Text="nome das facções"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   Margin="0,10,0,10"/>
+
+            <Button Text="facção da vilandia"
+                    FontSize="18"
+                    Margin="0,5"/>
+            <Button Text="facção da vilandia"
+                    FontSize="18"
+                    Margin="0,5"/>
+            <Button Text="facção da vilandia"
+                    FontSize="18"
+                    Margin="0,5"/>
+            <Button Text="facção da vilandia"
+                    FontSize="18"
+                    Margin="0,5"/>
+            <Button Text="facção da vilandia"
+                    FontSize="18"
+                    Margin="0,5"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

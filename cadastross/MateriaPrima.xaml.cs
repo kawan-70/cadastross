@@ -2,11 +2,12 @@ using Microsoft.Maui.Controls;
 
 namespace cadastross
 {
-    public partial class TeladoCliente : ContentPage
+    public partial class MateriaPrima : ContentPage
     {
-        public TeladoCliente()
+        public MateriaPrima()
         {
             InitializeComponent();
         }
     }
 }
+

@@ -1,12 +1,12 @@
-﻿namespace cadastross;
+﻿using Microsoft.Maui.Controls;
 
-public partial class MainPage : ContentPage
+namespace cadastross
 {
-	
-
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+    public partial class MainPagePage : ContentPage
+    {
+        public MainPagePage()
+        {
+            InitializeComponent();
+        }
+    }
 }
-

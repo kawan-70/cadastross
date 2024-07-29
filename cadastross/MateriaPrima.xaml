@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cadastross.MateriaPrima"
+             Title="Materiais">
+    <StackLayout Padding="10">
+        <!-- Header with search and buttons -->
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <Button Text="🔍" />
+            <Entry x:Name="SearchEntry" Placeholder="procurar" HorizontalOptions="FillAndExpand"/>
+            <Button Text="✏" />
+            <Button Text="+" />
+            <Button Text="-" />
+            <Button Text="🏠" />
+        </StackLayout>
+        
+        <!-- Title -->
+        <Button Text="lista de materiais" HorizontalOptions="Center" />
+
+        <!-- List of materials -->
+        <ScrollView>
+            <StackLayout>
+                <Button Text="linhas" />
+                <Button Text="plastico" />
+                <Button Text="botão" />
+                <Button Text="agulhas" />
+            </StackLayout>
+        </ScrollView>
+    </StackLayout>
+</ContentPage>

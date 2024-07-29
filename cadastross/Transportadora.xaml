@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cadastross.Transportadora"
+             BackgroundColor="White">
+
+    <ScrollView>
+        <VerticalStackLayout Padding="10">
+
+            <Label Text="tela inicial da transportadora"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start" />
+
+            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Start">
+                <SearchBar Placeholder="Carlos Henrique"
+                           WidthRequest="250"/>
+                <Button Text="✎"
+                        FontSize="18"
+                        WidthRequest="50"/>
+                <Button Text="➕"
+                        FontSize="18"
+                        WidthRequest="50"/>
+                <Button Text="➖"
+                        FontSize="18"
+                        WidthRequest="50"/>
+                <Button Text="🏠"
+                        FontSize="18"
+                        WidthRequest="50"/>
+            </HorizontalStackLayout>
+
+            <Label Text="nome das facções"
+                   FontSize="20"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Start"
+                   Margin="0,10,0,10"/>
+
+            <Button Text="Carlos Henrique"
+                    FontSize="18"
+                    Margin="0,5"/>
+            <Button Text="Lucas"
+                    FontSize="18"
+                    Margin="0,5"/>
+            <Button Text="rodrigo"
+                    FontSize="18"
+                    Margin="0,5"/>
+            <Button Text="guilherme"
+                    FontSize="18"
+                    Margin="0,5"/>
+            <Button Text="Felipe"
+                    FontSize="18"
+                    Margin="0,5"/>
+            <Button Text="Renan"
+                    FontSize="18"
+                    Margin="0,5"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
