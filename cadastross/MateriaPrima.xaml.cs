@@ -7,6 +7,9 @@ namespace cadastross
         public MateriaPrima()
         {
             InitializeComponent();
+
+            var rest = Awaint DisplayAlert ("tir","msg","botão 1","botâo?");
+            IF (rest =="botão1")
         }
     }
 }
