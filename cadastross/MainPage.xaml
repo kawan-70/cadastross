@@ -24,7 +24,8 @@
                 <Button Text="produto"
                         BackgroundColor="White" 
                         TextColor="Black" 
-                        WidthRequest="200" />
+                        WidthRequest="200"
+                        Clicked="botãoproduto"/>
 
 
                 <Button Text="cliente" 

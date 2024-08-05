@@ -8,5 +8,10 @@ namespace cadastross
         {
             InitializeComponent();
         }
+        
+	private void botãoproduto(object sender, EventArgs args)
+	{
+		Application.Current.MainPage = new Produto();
     }
+}
 }
