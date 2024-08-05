@@ -8,8 +8,8 @@ namespace cadastross
         {
             InitializeComponent();
 
-            var rest = Awaint DisplayAlert ("tir","msg","botão 1","botâo?");
-            IF (rest =="botão1")
+           // var rest = Awaint DisplayAlert ("tir","msg","botão 1","botâo?");
+           // IF (rest =="botão1") Application.Current.MainPage = new PlayPage();
         }
     }
 }

@@ -2,9 +2,9 @@
 
 namespace cadastross
 {
-    public partial class MainPagePage : ContentPage
+    public partial class MainPage : ContentPage
     {
-        public MainPagePage()
+        public MainPage()
         {
             InitializeComponent();
         }

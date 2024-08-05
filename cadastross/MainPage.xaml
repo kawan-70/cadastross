@@ -3,25 +3,55 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="cadastross.MainPage"
              Title="Tela Inicial">
-    <ContentPage.Content>
-        <Grid BackgroundColor="Navy">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="2*" />
-                <RowDefinition Height="3*" />
-            </Grid.RowDefinitions>
+    
+                      <Grid BackgroundColor="#1806A6">
+                          <Grid.RowDefinitions>
+                              <RowDefinition Height="2*" />
+                              <RowDefinition Height="3*" />
+                          </Grid.RowDefinitions>
 
             <!-- Image at the top -->
-            <Image Source="cap_image.png" Aspect="AspectFit" Grid.Row="0" />
+            <Image Source="bone.png" 
+                   Aspect="AspectFit"
+                   Grid.Row="0"/>
 
             <!-- Buttons in the middle -->
-            <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Grid.Row="1" Spacing="10">
-                <Button Text="produto" BackgroundColor="White" TextColor="Black" WidthRequest="200" />
-                <Button Text="cliente" BackgroundColor="White" TextColor="Black" WidthRequest="200" />
-                <Button Text="materia prima" BackgroundColor="White" TextColor="Black" WidthRequest="200" />
-                <Button Text="fornecedor" BackgroundColor="White" TextColor="Black" WidthRequest="200" />
-                <Button Text="transportadora" BackgroundColor="White" TextColor="Black" WidthRequest="200" />
+            <StackLayout VerticalOptions="Center"
+                         HorizontalOptions="Center" 
+                         Grid.Row="1" 
+                         Spacing="10">
+
+                <Button Text="produto"
+                        BackgroundColor="White" 
+                        TextColor="Black" 
+                        WidthRequest="200" />
+
+
+                <Button Text="cliente" 
+                        BackgroundColor="White" 
+                        TextColor="Black" 
+                        WidthRequest="200" />
+
+
+                <Button Text="materia prima" 
+                        BackgroundColor="White" 
+                        TextColor="Black" 
+                        WidthRequest="200" />
+
+
+                <Button Text="fornecedor"
+                        BackgroundColor="White"
+                        TextColor="Black" 
+                        WidthRequest="200" />
+
+
+                <Button Text="transportadora" 
+                        BackgroundColor="White" 
+                        TextColor="Black" 
+                        WidthRequest="200" />
+
+
             </StackLayout>
         </Grid>
-    </ContentPage.Content>
 </ContentPage>
 
