@@ -4,14 +4,18 @@
              x:Class="cadastross.Produto"
              BackgroundColor="White">
              
-
     <ScrollView>
         <VerticalStackLayout Padding="10">
 
-        <bacround Image Source="maquinas.png"
-              Aspect="AspectFill" />
+        <Image Source="maquinas.png"
+               Aspect="AspectFill" 
+               AbsoluteLayout.LayoutBounds="0,0,1,1"
+               AbsoluteLayout.LayoutFlags="All" />
 
-            <HorizontalStackLayout HorizontalOptions="Center" VerticalOptions="Start">
+            <HorizontalStackLayout HorizontalOptions="Center"
+                                   VerticalOptions="Start">
+
+                                   
                 <SearchBar Placeholder="facção do beramar"
                            WidthRequest="250"/>
                 <Button ImageSource="lapis.png"
