@@ -1,24 +1,50 @@
-using Modelos;
+using cadastross;
+using cadastross.Modelos;
 
-namespace Controles
+namespace cadastross;
+
+public class ControleBase
 {
-    public class FornecedorControle:ControleBase
-     { 
-        public override void Criar (Registro O)
-        {
-        }
+  //----------------------------------------------------------------------------
 
-        public override void Atualizar (Registro O)
-        {
-        }
+  protected string NomeDaTabela;
+  protected static LiteDatabase liteDB = null;
 
-        public override void Apagar (int id)
-        {
-        }
-        
-        public override Registro Ler (int id)
-        {
-            return null;
-        }
-     }
+  //----------------------------------------------------------------------------
+
+  public ControleBase()
+  {
+    var pathToPersonalFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "SESI.db");
+
+    if (liteDB == null)
+      liteDB = new LiteDatabase(@"filename=" + pathToPersonalFolder + "; upgrade=true; Mode=Exclusive");
+  }
+
+  //----------------------------------------------------------------------------
+
+  public virtual void CriarOuAtualizar(Registro r)
+  {
+  }
+  
+  //----------------------------------------------------------------------------
+
+  public virtual void Apagar(int id)
+  {
+  }
+  
+  //----------------------------------------------------------------------------
+
+  public virtual Registro? Ler(int id)
+  {
+    return null;
+  }
+
+  //----------------------------------------------------------------------------
+
+  public virtual List<Registro>? LerTodos()
+  {
+    return null;
+  }
+
+  //----------------------------------------------------------------------------
 }

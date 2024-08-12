@@ -5,19 +5,15 @@
              BackgroundColor="White">
              
     <ScrollView>
-        <VerticalStackLayout Padding="10">
-
-        <Image Source="maquinas.png"
-               Aspect="AspectFill" 
-               AbsoluteLayout.LayoutBounds="0,0,1,1"
-               AbsoluteLayout.LayoutFlags="All" />
+        <VerticalStackLayout Padding="10">     
 
             <HorizontalStackLayout HorizontalOptions="Center"
                                    VerticalOptions="Start">
 
                                    
-                <SearchBar Placeholder="facção do beramar"
+                <SearchBar Placeholder="pesquisar"
                            WidthRequest="250"/>
+                           
                 <Button ImageSource="lapis.png"
                         FontSize="18"
                         WidthRequest="50"/>
@@ -68,6 +64,10 @@
                    VerticalOptions="Start"
                    FontFamily="letras.ttf" />
 
+
+        <Image Source="maquinas.png"
+                Aspect="Center"/>
+                
         </VerticalStackLayout>
     </ScrollView>
 
