@@ -1,7 +1,7 @@
-using cadastross;
-using cadastross.Modelos;
+using LiteDB;
+using Modelos;
 
-namespace cadastross;
+namespace Controles;
 
 public class ControleBase
 {

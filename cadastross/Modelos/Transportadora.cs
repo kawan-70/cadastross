@@ -1,10 +1,11 @@
-using cadastross;
+using LiteDB;
 
-namespace cadastross.Modelos;
+namespace Modelos;
 
 public class Transportadora : Registro
 {
   [BsonId]
+  
   public int Id { get; set; }
   public string Nome { get; set; }
   public string Endereço { get; set; }

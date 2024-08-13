@@ -1,7 +1,6 @@
-using cadastross;
-using Modelos;
+using LiteDB;
 
-namespace cadastross;
+namespace Modelos;
 
 public class Materia : Registro
 {

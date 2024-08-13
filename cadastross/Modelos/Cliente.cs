@@ -1,8 +1,8 @@
-using cadastross;
+using LiteDB;
 
-namespace cadastross;
+namespace Modelos;
 
-public class Cliente : Pessoas
+public class Cliente : Registro
 {
   [BsonId]
   public int Id { get; set; }

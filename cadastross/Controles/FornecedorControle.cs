@@ -1,49 +1,46 @@
-using cadastross;
-using cadastross.Modelos;
+using Modelos;
 
-namespace cadastross;
+namespace Controles;
 
-public class ControleBase
+public class FornecedorControle : ControleBase
 {
   //----------------------------------------------------------------------------
 
-  protected string NomeDaTabela;
-  protected static LiteDatabase liteDB = null;
-
-  //----------------------------------------------------------------------------
-
-  public ControleBase()
+  public FornecedorControle() : base()
   {
-    var pathToPersonalFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "SESI.db");
-
-    if (liteDB == null)
-      liteDB = new LiteDatabase(@"filename=" + pathToPersonalFolder + "; upgrade=true; Mode=Exclusive");
+    NomeDaTabela = "Clientes";
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual void CriarOuAtualizar(Registro r)
+  public virtual Registro? Ler(int idCliente)
   {
-  }
-  
-  //----------------------------------------------------------------------------
-
-  public virtual void Apagar(int id)
-  {
-  }
-  
-  //----------------------------------------------------------------------------
-
-  public virtual Registro? Ler(int id)
-  {
-    return null;
+    var collection = liteDB.GetCollection<Cliente>(NomeDaTabela);
+    return collection.FindOne(d => d.Id == idCliente);
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual List<Registro>? LerTodos()
+  public virtual List<Cliente>? LerTodos()
   {
-    return null;
+    var tabela = liteDB.GetCollection<Cliente>(NomeDaTabela);
+    return new List<Cliente>(tabela.FindAll().OrderBy(d => d.Nome));
+  }
+
+  //----------------------------------------------------------------------------
+
+  public virtual void Apagar(int idCliente)
+  {
+    var collection = liteDB.GetCollection<Cliente>(NomeDaTabela);
+    collection.Delete(idCliente);
+  }
+
+  //----------------------------------------------------------------------------
+
+  public virtual void CriarOuAtualizar(Cliente cliente)
+  {
+    var collection = liteDB.GetCollection<Cliente>(NomeDaTabela);
+    collection.Upsert(cliente);
   }
 
   //----------------------------------------------------------------------------

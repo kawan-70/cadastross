@@ -1,9 +1,9 @@
-using cadastross;
+using LiteDB;
 
-namespace cadastross.Modelos;
-
-public class Fornecedor : Registro
+namespace Modelos
 {
+public class Fornecedor : Pessoa
+ {
   [BsonId]
   public int Id { get; set; }
   public string Nome { get; set; }
@@ -11,4 +11,5 @@ public class Fornecedor : Registro
   public string Numero { get; set; }
   public string Cpf { get; set; }
   public string Estado { get; set; }
+  }
 }

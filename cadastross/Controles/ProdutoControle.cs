@@ -1,49 +1,46 @@
-using cadastross;
-using cadastross.Modelos;
+using Modelos;
 
-namespace cadastross;
+namespace Controles;
 
-public class BaseControle
+public class ProdutoControle : ControleBase
 {
   //----------------------------------------------------------------------------
 
-  protected string NomeDaTabela;
-  protected static LiteDatabase liteDB = null;
-
-  //----------------------------------------------------------------------------
-
-  public BaseControle()
+  public ProdutoControle() : base()
   {
-    var pathToPersonalFolder = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "SESI.db");
-
-    if (liteDB == null)
-      liteDB = new LiteDatabase(@"filename=" + pathToPersonalFolder + "; upgrade=true; Mode=Exclusive");
+    NomeDaTabela = "Produto";
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual void CriarOuAtualizar(Registro r)
+  public virtual Registro? Ler(int idProduto)
   {
-  }
-  
-  //----------------------------------------------------------------------------
-
-  public virtual void Apagar(int id)
-  {
-  }
-  
-  //----------------------------------------------------------------------------
-
-  public virtual Registro? Ler(int id)
-  {
-    return null;
+    var collection = liteDB.GetCollection<Produto>(NomeDaTabela);
+    return collection.FindOne(d => d.Id == idProduto);
   }
 
   //----------------------------------------------------------------------------
 
-  public virtual List<Registro>? LerTodos()
+  public virtual List<Produto>? LerTodos()
   {
-    return null;
+    var tabela = liteDB.GetCollection<Produto>(NomeDaTabela);
+    return new List<Produto>(tabela.FindAll().OrderBy(d => d.Nome));
+  }
+
+  //----------------------------------------------------------------------------
+
+  public virtual void Apagar(int idProduto)
+  {
+    var collection = liteDB.GetCollection<Produto>(NomeDaTabela);
+    collection.Delete(idProduto);
+  }
+
+  //----------------------------------------------------------------------------
+
+  public virtual void CriarOuAtualizar(Produto produto)
+  {
+    var collection = liteDB.GetCollection<Produto>(NomeDaTabela);
+    collection.Upsert(produto);
   }
 
   //----------------------------------------------------------------------------
