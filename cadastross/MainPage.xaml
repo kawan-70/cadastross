@@ -31,25 +31,29 @@
                 <Button Text="cliente" 
                         BackgroundColor="White" 
                         TextColor="Black" 
-                        WidthRequest="200" />
+                        WidthRequest="200"
+                        Clicked="botãocliente" />
 
 
                 <Button Text="materia prima" 
                         BackgroundColor="White" 
                         TextColor="Black" 
-                        WidthRequest="200" />
+                        WidthRequest="200"
+                        Clicked="botãoMateria" />
 
 
                 <Button Text="fornecedor"
                         BackgroundColor="White"
                         TextColor="Black" 
-                        WidthRequest="200" />
+                        WidthRequest="200" 
+                        Clicked="botãoFornecedor"/>
 
 
                 <Button Text="transportadora" 
                         BackgroundColor="White" 
                         TextColor="Black" 
-                        WidthRequest="200" />
+                        WidthRequest="200"
+                         Clicked="botãoTransportadora"/>
 
 
             </StackLayout>

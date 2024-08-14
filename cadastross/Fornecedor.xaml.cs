@@ -8,5 +8,9 @@ namespace cadastross
         {
             InitializeComponent();
         }
+           private void botâoVoltar(object sender, EventArgs args)
+	{
+		Application.Current.MainPage = new MainPage();
+    }
     }
 }

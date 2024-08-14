@@ -26,10 +26,11 @@
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
-                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
 
                 <!-- Barra de pesquisa e botões -->
@@ -62,7 +63,8 @@
                         FontSize="18"
                         Grid.Row="0"
                         Grid.Column="4"
-                        WidthRequest="50"/>
+                        WidthRequest="50"
+                        Clicked="botâoVoltar"/>
 
                 <!-- Título -->
                 <Label Text="nome das facções"
@@ -74,38 +76,35 @@
                        VerticalOptions="Start"
                        Margin="0,10,0,10"/>
 
-                <!-- Botões das facções -->
-                <Button Text="facção da vilandia"
-                        FontSize="20"
-                        Grid.Row="2"
-                        Grid.Column="0"
-                        Margin="0,5"/>
-                
-                <Button Text="facção da vilandia"
-                        FontSize="20"
-                        Grid.Row="2"
-                        Grid.Column="1"
-                        Margin="0,5"/>
+                <!-- Layout para os botões das facções -->
+                <StackLayout Grid.Row="2"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="4"
+                             Orientation="Vertical"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center">
+                    <Button Text="facção da vilandia"
+                            FontSize="20"
+                            Margin="0,5"/>
 
-                <Button Text="facção da vilandia"
-                        FontSize="20"
-                        Grid.Row="2"
-                        Grid.Column="2"
-                        Margin="0,5"/>
+                    <Button Text="facção da vilandia"
+                            FontSize="20"
+                            Margin="0,5"/>
 
-                <Button Text="facção da vilandia"
-                        FontSize="20"
-                        Grid.Row="2"
-                        Grid.Column="3"
-                        Margin="0,5"/>
+                    <Button Text="facção da vilandia"
+                            FontSize="20"
+                            Margin="0,5"/>
 
-                <Button Text="facção da vilandia"
-                        FontSize="20"
-                        Grid.Row="2"
-                        Grid.Column="4"
-                        Margin="0,5"/>
+                    <Button Text="facção da vilandia"
+                            FontSize="20"
+                            Margin="0,5"/>
 
-                <!-- Título da tela e imagem -->
+                    <Button Text="facção da vilandia"
+                            FontSize="20"
+                            Margin="0,5"/>
+                </StackLayout>
+
+                <!-- Título da tela -->
                 <Label Text="Tela Inicial Dos Produtos"
                        FontSize="30"
                        Grid.Row="3"
@@ -114,12 +113,15 @@
                        HorizontalOptions="Center"
                        VerticalOptions="Start"
                        FontFamily="letras.ttf"/>
-                
+
+                <!-- Imagem do C# -->
                 <Image Source="maquinas.png"
-                       Aspect="Center"
+                       Aspect="AspectFit"
                        Grid.Row="4"
                        Grid.Column="0"
-                       Grid.ColumnSpan="4"/>
+                       Grid.ColumnSpan="4"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
             </Grid>
         </ScrollView>
     </AbsoluteLayout>

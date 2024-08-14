@@ -7,12 +7,29 @@
         <VerticalStackLayout Padding="10" Spacing="10">
             
             <HorizontalStackLayout>
-                <Image Source="search_icon.png" WidthRequest="30" HeightRequest="30"/>
-                <Entry Placeholder="Carlos Henrique" HorizontalOptions="FillAndExpand"/>
-                <Image Source="edit_icon.png" WidthRequest="30" HeightRequest="30"/>
-                <Image Source="zoom_in_icon.png" WidthRequest="30" HeightRequest="30"/>
-                <Image Source="zoom_out_icon.png" WidthRequest="30" HeightRequest="30"/>
-                <Image Source="back_icon.png" WidthRequest="30" HeightRequest="30"/>
+                <Image Source="search_icon.png"
+                       WidthRequest="30" 
+                       HeightRequest="30"/>
+
+                <Entry Placeholder="Carlos Henrique" 
+                       HorizontalOptions="FillAndExpand"/>    
+
+                <Image Source="edit_icon.png" 
+                       WidthRequest="30" 
+                       HeightRequest="30"/>
+
+                <Image Source="zoom_in_icon.png" 
+                       WidthRequest="30" 
+                       HeightRequest="30"/>
+
+                <Image Source="zoom_out_icon.png" 
+                       WidthRequest="30" 
+                       HeightRequest="30"/>
+
+
+                <Image Source="back_icon.png"
+                       WidthRequest="30" 
+                       HeightRequest="30"/>
             </HorizontalStackLayout>
             
             <Button Text="Lista de Clientes" />

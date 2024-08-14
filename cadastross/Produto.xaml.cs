@@ -7,8 +7,11 @@ namespace cadastross
         public Produto()
         {
             InitializeComponent();
-          //   var rest = Awaint DisplayAlert ("tir","msg","botão 1","botâo?");
-          //  IF (rest =="botão1")
         }
+        	private void botâoVoltar(object sender, EventArgs args)
+	{
+		Application.Current.MainPage = new MainPage();
+    }
+
     }
 }
