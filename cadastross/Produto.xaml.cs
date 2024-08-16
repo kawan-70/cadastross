@@ -12,6 +12,10 @@ namespace cadastross
 	{
 		Application.Current.MainPage = new MainPage();
     }
+      private void botâocadastrar(object sender, EventArgs args)
+	{
+		Application.Current.MainPage = new CadastroCliente();
+    }
 
     }
 }

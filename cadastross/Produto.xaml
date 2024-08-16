@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="cadastross.Produto"
-             BackgroundColor="White">
+             BackgroundColor="#b2a9f5">
 
     <AbsoluteLayout>
 
@@ -92,27 +92,28 @@
                              HorizontalOptions="FillAndExpand"
                              VerticalOptions="Center">
 
-                    <Button Text="Facção da Vilandia"
+                    <Button Text="digite seu nome"
+                            FontSize="20"
+                            Margin="0,5"
+                            HorizontalOptions="FillAndExpand"
+                            Clicked="botâocadastrar"/>
+
+                    <Entry  Placeholder="digite seu nome"
                             FontSize="20"
                             Margin="0,5"
                             HorizontalOptions="FillAndExpand"/>
 
-                    <Button Text="Facção da Vilandia"
+                    <Entry  Placeholder="digite seu nome"
                             FontSize="20"
                             Margin="0,5"
                             HorizontalOptions="FillAndExpand"/>
 
-                    <Button Text="Facção da Vilandia"
+                    <Entry  Placeholder="digite seu nome"
                             FontSize="20"
                             Margin="0,5"
                             HorizontalOptions="FillAndExpand"/>
 
-                    <Button Text="Facção da Vilandia"
-                            FontSize="20"
-                            Margin="0,5"
-                            HorizontalOptions="FillAndExpand"/>
-
-                    <Button Text="Facção da Vilandia"
+                    <Entry  Placeholder="digite seu nome"
                             FontSize="20"
                             Margin="0,5"
                             HorizontalOptions="FillAndExpand"/>

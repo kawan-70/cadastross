@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cadastross.CadastroCliente"
+              Shell.NavBarIsVisible="false">
+
+            <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+                <Label Text ="TELA CADASTRAR">
+                    <Entry  Placeholder="digite seu nome"
+                            FontSize="20"
+                            Margin="0,5"
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Row=""/>
+
+                    <Entry  Placeholder="digite seu nome"
+                            FontSize="20"
+                            Margin="0,5"
+                            HorizontalOptions="FillAndExpand"/>
+
+                    <Entry  Placeholder="digite seu nome"
+                            FontSize="20"
+                            Margin="0,5"
+                            HorizontalOptions="FillAndExpand"/>
+
+                    <Entry  Placeholder="digite seu nome"
+                            FontSize="20"
+                            Margin="0,5"
+                            HorizontalOptions="FillAndExpand"/>
+            
+
+</ContentPage>
