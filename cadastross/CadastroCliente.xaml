@@ -2,12 +2,16 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="cadastross.CadastroCliente"
-              Shell.NavBarIsVisible="false">
+              Shell.NavBarIsVisible="false"
+              BackgroundColor="#cedeeb">
 
-            <Grid.RowDefinitions>
+     <Grid>
+
+               <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
@@ -20,27 +24,56 @@
                     <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                <Label Text ="TELA CADASTRAR">
-                    <Entry  Placeholder="digite seu nome"
+       
+
+            <Label Text="Cadastro dos produtos"
+                       FontSize="50" 
+                       Grid.ColumnSpan="5"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       FontFamily="letras.ttf"/>
+
+
+                   <Entry x:Name="nome"
+                            Placeholder="digite seu nome"
                             FontSize="20"
                             Margin="0,5"
                             HorizontalOptions="FillAndExpand"
-                            Grid.Row=""/>
+                            Grid.Row="1"
+                            Grid.Column="0"/>
 
-                    <Entry  Placeholder="digite seu nome"
+                    <Entry  
+                            Placeholder="digite seu cpf"
                             FontSize="20"
                             Margin="0,5"
-                            HorizontalOptions="FillAndExpand"/>
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Row="2"
+                            Grid.Column="0"/>
 
-                    <Entry  Placeholder="digite seu nome"
+                    <Entry  
+                            Placeholder="digite seu "
                             FontSize="20"
                             Margin="0,5"
-                            HorizontalOptions="FillAndExpand"/>
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Row="3"
+                            Grid.Column="0"/>
 
-                    <Entry  Placeholder="digite seu nome"
+                    <Entry 
+                            Placeholder="digite seu nome"
                             FontSize="20"
                             Margin="0,5"
-                            HorizontalOptions="FillAndExpand"/>
-            
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Row="4"
+                            Grid.Column="0"/>
+
+              <Button ImageSource="seta.png"
+                            FontSize="18"
+                            WidthRequest="50"
+                            VerticalOptions="Center"
+                            Clicked="todevolta"
+                            Grid.Row="4"
+                            Grid.Column="5"/>
+      
+</Grid>
 
 </ContentPage>
