@@ -1,46 +1,144 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="cadastross.TeladoCliente">
-
-    <ScrollView>
-        <VerticalStackLayout Padding="10" Spacing="10">
-            
-            <HorizontalStackLayout>
-                <Image Source="search_icon.png"
-                       WidthRequest="30" 
-                       HeightRequest="30"/>
-
-                <Entry Placeholder="Carlos Henrique" 
-                       HorizontalOptions="FillAndExpand"/>    
-
-                <Image Source="edit_icon.png" 
-                       WidthRequest="30" 
-                       HeightRequest="30"/>
-
-                <Image Source="zoom_in_icon.png" 
-                       WidthRequest="30" 
-                       HeightRequest="30"/>
-
-                <Image Source="zoom_out_icon.png" 
-                       WidthRequest="30" 
-                       HeightRequest="30"/>
+             x:Class="cadastross.TeladoCliente"
+             BackgroundColor="#000000">
 
 
-                <Image Source="back_icon.png"
-                       WidthRequest="30" 
-                       HeightRequest="30"/>
-            </HorizontalStackLayout>
-            
-            <Button Text="Lista de Clientes" />
-            <Button Text="Larissa Gomes" />
-            <Button Text="Larissa Gomes" />
-            <Button Text="Larissa Gomes" />
-            <Button Text="Larissa Gomes" />
-            <Button Text="Larissa Gomes" />
-            <Button Text="Carlos" />
-            
-        </VerticalStackLayout>
-    </ScrollView>
+    <AbsoluteLayout>
 
+      
+        <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All">
+            <Grid Padding="10">
+         
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+     
+                <Grid Grid.RowSpan="0"
+                      Grid.ColumnSpan="0"
+                      Grid.Column="3"
+                      VerticalOptions="Center"
+                      HorizontalOptions="FillAndExpand">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <SearchBar Placeholder="Pesquisar"
+                               Grid.Column="0"
+                               WidthRequest="250"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="Center"/>
+                    
+                    <Button ImageSource="lapis.png"
+                            Grid.Column="1"
+                            FontSize="18"
+                            WidthRequest="50"
+                            VerticalOptions="Center"/>
+                    
+                    <Button ImageSource="mais.png"
+                            Grid.Column="2"
+                            FontSize="18"
+                            WidthRequest="50"
+                            VerticalOptions="Center"/>
+                    
+                    <Button ImageSource="menos.png"
+                            Grid.Column="3"
+                            FontSize="18"
+                            WidthRequest="50"
+                            VerticalOptions="Center"/>
+                    
+                    <Button ImageSource="seta.png"
+                            Grid.Column="4"
+                            FontSize="18"
+                            WidthRequest="50"
+                            VerticalOptions="Center"
+                            Clicked="outodevolta"/>
+                </Grid>
+
+               
+                <Button Text="Bem Vindo ao Aetor do Cliente"
+                       FontSize="40"
+                       BackgroundColor="#73181d"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="5"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       FontFamily="letras.ttf"
+                       Margin="0,10,0,10"/>
+
+                
+                <StackLayout Grid.Row="2"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="5"
+                             Orientation="Vertical"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="Center">
+
+                    <Button Text="digite seu nome"
+                            FontSize="20"
+                            Margin="0,5"
+                            BackgroundColor="#5c67e0"
+                            HorizontalOptions="FillAndExpand"/>
+                            
+
+                     <Button Text="digite seu nome"
+                            FontSize="20"
+                            BackgroundColor="#5c67e0"
+                            Margin="0,5"
+                            HorizontalOptions="FillAndExpand"/>
+
+                    <Button Text="digite seu nome"
+                            FontSize="20"
+                            BackgroundColor="#5c67e0"
+                            Margin="0,5"
+                            HorizontalOptions="FillAndExpand"/>
+
+                     <Button Text="digite seu nome"
+                            FontSize="20"
+                             BackgroundColor="#5c67e0"
+                            Margin="0,5"
+                            HorizontalOptions="FillAndExpand"/>
+
+                     <Button Text="digite seu nome"
+                             BackgroundColor="#5c67e0"
+                             FontSize="20"
+                             Margin="0,5"
+                             HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+                <!-- Título da tela -->
+           
+
+                <Image Source="foiso.png"
+                       Aspect="AspectFit"
+                       Grid.Row="4"
+                       Grid.Column="3"
+                       Grid.ColumnSpan="2"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       />
+            </Grid>
+        </ScrollView>
+    </AbsoluteLayout>
 </ContentPage>

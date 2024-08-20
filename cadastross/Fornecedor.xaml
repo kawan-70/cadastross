@@ -2,31 +2,138 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="cadastross.Fornecedor"
-             Title="Fornecedor">
-    <StackLayout Padding="10">
-        <!-- Header with search and buttons -->
-        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-            <Entry x:Name="SearchEntry" Placeholder="Carlos Henrique" HorizontalOptions="FillAndExpand"/>
-            <Button Text="✏" />
-            <Button Text="+" />
-            <Button Text="-" />
-            <Button Text="🏠" />
-        </StackLayout>
-        
-        <!-- Title -->
-        <Button Text="tela inicial do fornecedor" HorizontalOptions="Center" />
+             Title="Fornecedor"
+             BackgroundColor="#291e75">
+   
+    <AbsoluteLayout>
 
-        <!-- List of suppliers -->
-        <Label Text="lista de fornecedores" FontAttributes="Bold" HorizontalOptions="Center" />
-        <ScrollView>
-            <StackLayout>
-                <Button Text="Larissa Gomes" />
-                <Button Text="Larissa Gomes" />
-                <Button Text="Larissa Gomes" />
-                <Button Text="Larissa Gomes" />
-                <Button Text="Larissa Gomes" />
-                <Button Text="pablo vitar" />
-            </StackLayout>
+      
+        <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1"
+                    AbsoluteLayout.LayoutFlags="All">
+            <Grid Padding="10">
+         
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+     
+                <Grid Grid.RowSpan="0"
+                      Grid.ColumnSpan="0"
+                      Grid.Column="3"
+                      VerticalOptions="Center"
+                      HorizontalOptions="FillAndExpand">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <SearchBar Placeholder="Pesquisar"
+                               Grid.Column="0"
+                               WidthRequest="250"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="Center"/>
+                    
+                    <Button ImageSource="lapis.png"
+                            Grid.Column="1"
+                            FontSize="18"
+                            WidthRequest="50"
+                            VerticalOptions="Center"/>
+                    
+                    <Button ImageSource="mais.png"
+                            Grid.Column="2"
+                            FontSize="18"
+                            WidthRequest="50"
+                            VerticalOptions="Center"/>
+                    
+                    <Button ImageSource="menos.png"
+                            Grid.Column="3"
+                            FontSize="18"
+                            WidthRequest="50"
+                            VerticalOptions="Center"/>
+                    
+                    <Button ImageSource="seta.png"
+                            Grid.Column="4"
+                            FontSize="18"
+                            WidthRequest="50"
+                            VerticalOptions="Center"
+                            Clicked="heijavoltei"/>
+                </Grid>
+
+               
+                <Button Text="tela inicial dos fornecedores"
+                       FontSize="40"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="5"
+                       BackgroundColor="#4e0d80"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       FontFamily="letras.ttf"
+                       Margin="0,10,0,10"/>
+
+                
+                <StackLayout Grid.Row="2"
+                             Grid.Column="0"
+                             Grid.ColumnSpan="5"
+                             Orientation="Vertical"
+                             HorizontalOptions="FillAndExpand"
+                             VerticalOptions="Center">
+
+                      <Button Text="nome do forneccedor"
+                              BackgroundColor="#9acbfc"
+                              FontSize="20"
+                              Margin="0,5"
+                              HorizontalOptions="FillAndExpand"/>
+                            
+
+                      <Button Text="nome do forneccedor"
+                            FontSize="20"
+                            BackgroundColor="#9acbfc"
+                            Margin="0,5"
+                            HorizontalOptions="FillAndExpand"/>
+
+                     <Button Text="nome do forneccedor"
+                            FontSize="20"
+                            BackgroundColor="#9acbfc"
+                            Margin="0,5"
+                            HorizontalOptions="FillAndExpand"/>
+
+                     <Button Text="nome do forneccedor"
+                            FontSize="20"
+                            BackgroundColor="#9acbfc"
+                            Margin="0,5"
+                            HorizontalOptions="FillAndExpand"/>
+
+                    <Button Text="nome do forneccedor"
+                            FontSize="20"
+                            BackgroundColor="#9acbfc"
+                            Margin="0,5"
+                            HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+
+                
+
+                <!-- Imagem do C# -->
+                <Image Source="bonis.png"
+                       Grid.Row="4"
+                       Grid.Column="1"/>
+            </Grid>
         </ScrollView>
-    </StackLayout>
+    </AbsoluteLayout>
 </ContentPage>
