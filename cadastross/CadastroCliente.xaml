@@ -33,35 +33,64 @@
                        VerticalOptions="Start"
                        FontFamily="letras.ttf"/>
 
+                <Label Text="Id:"
+                       FontSize="28" 
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       Margin="0,60,0,0"
+                       FontFamily="letras.ttf"/>
+
+                <Label Text="nome:"
+                       FontSize="28" 
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       FontFamily="letras.ttf"/>
+
+                <Label Text="cpf:"
+                       FontSize="28" 
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       FontFamily="letras.ttf"/>
+
+                <Label Text="endereço:"
+                       FontSize="28" 
+                       Grid.Row="3"
+                       Grid.Column="0"
+                       FontFamily="letras.ttf"/>
+
+                <Label Text="telefone:"
+                       FontSize="28" 
+                       Grid.Row="4"
+                       Grid.Column="0"
+                       FontFamily="letras.ttf"/>
 
                    <Entry x:Name="nome"
                             Placeholder="digite seu nome"
                             FontSize="20"
-                            Margin="0,5"
-                            HorizontalOptions="FillAndExpand"
+                            Margin="70,0,0,0"
                             Grid.Row="1"
-                            Grid.Column="0"/>
+                            Grid.ColumnSpan="1"/>
 
-                    <Entry  
+                    <Entry  x:Name="cpfEntry"
                             Placeholder="digite seu cpf"
                             FontSize="20"
-                            Margin="0,5"
+                            Margin="70,0,0,0"
                             HorizontalOptions="FillAndExpand"
                             Grid.Row="2"
                             Grid.Column="0"/>
 
-                    <Entry  
-                            Placeholder="digite seu "
+                    <Entry  x:Name="endereçoEntry"
+                            Placeholder="digite seu nome "
                             FontSize="20"
-                            Margin="0,5"
+                             Margin="100,0,0,0"
                             HorizontalOptions="FillAndExpand"
                             Grid.Row="3"
                             Grid.Column="0"/>
 
-                    <Entry 
-                            Placeholder="digite seu nome"
+                    <Entry x:Name="EmailEntry"
+                            Placeholder="digite o seu email"
                             FontSize="20"
-                            Margin="0,5"
+                            Margin="100,0,0,0"
                             HorizontalOptions="FillAndExpand"
                             Grid.Row="4"
                             Grid.Column="0"/>
@@ -73,6 +102,8 @@
                             Clicked="todevolta"
                             Grid.Row="4"
                             Grid.Column="5"/>
+
+              
       
 </Grid>
 

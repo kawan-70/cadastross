@@ -5,7 +5,10 @@
              Title="Materiais"
              BackgroundColor="#110266">
 
-  <AbsoluteLayout>
+ 
+
+      
+     <AbsoluteLayout>
 
       
         <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1"
@@ -22,19 +25,12 @@
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="200"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
 
-                    <SearchBar Placeholder="Pesquisar"
-                               Grid.Column="0"
-                               Grid.ColumnSpan="0"
-                               BackgroundColor="AliceBlue"
-                               WidthRequest="250"
-                               HorizontalOptions="FillAndExpand"
-                               VerticalOptions="Center"/>
      
                 <Grid Grid.RowSpan="0"
                       Grid.ColumnSpan="0"
@@ -43,35 +39,39 @@
                       HorizontalOptions="FillAndExpand">
 
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="50"/>
-                        <ColumnDefinition Width="80"/>
-                        <ColumnDefinition Width="80"/>
-                        <ColumnDefinition Width="80"/>
-                        <ColumnDefinition Width="80"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
                     </Grid.ColumnDefinitions>
 
+                    <SearchBar Placeholder="Pesquisar"
+                               Grid.Column="0"
+                               WidthRequest="250"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="Center"/>
                     
                     <Button ImageSource="lapis.png"
-                            Grid.Column="0"
-                            FontSize="18"
-                            WidthRequest="50"
-                           
-                            VerticalOptions="Center"/>
-                    
-                    <Button ImageSource="mais.png"
                             Grid.Column="1"
                             FontSize="18"
                             WidthRequest="50"
                             VerticalOptions="Center"/>
                     
-                    <Button ImageSource="menos.png"
+                    <Button ImageSource="mais.png"
                             Grid.Column="2"
                             FontSize="18"
                             WidthRequest="50"
                             VerticalOptions="Center"/>
                     
-                    <Button ImageSource="seta.png"
+                    <Button ImageSource="menos.png"
                             Grid.Column="3"
+                            FontSize="18"
+                            WidthRequest="50"
+                            VerticalOptions="Center"/>
+                    
+                    <Button ImageSource="seta.png"
+                            Grid.Column="4"
                             FontSize="18"
                             WidthRequest="50"
                             VerticalOptions="Center"
@@ -79,8 +79,8 @@
                 </Grid>
 
                
-                <Button Text="Bem Vindo ao Aetor da Materia Prima"
-                       FontSize="25"
+                <Button Text="Bem Vindo ao Aetor do Cliente"
+                       FontSize="40"
                        BackgroundColor="#73181d"
                        Grid.Row="1"
                        Grid.Column="0"
@@ -136,22 +136,26 @@
                 <Image Source="plastico.png"
                        Aspect="AspectFit"
                        Grid.Row="4"
-                       Grid.Column="3"/>
-
+                       Grid.Column="3"
+                       Grid.ColumnSpan="2"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       />
                 <Image Source="algodao.png"
                        Aspect="AspectFit"
                        Grid.Row="4"
-                       Grid.Column="2"/>
+                       Grid.Column="2"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Margin="100,0,100,0"/>
 
                 <Image Source="tecido.png"
                        Aspect="AspectFit"
                        Grid.Row="4"
-                       Grid.Column="1"/>
-
-                <Image Source="linhasp.png"
-                       Aspect="AspectFit"
-                       Grid.Row="4"
-                       Grid.Column="0"/>
+                       Grid.Column="1"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Margin="100,0,100,0"/>
             </Grid>
         </ScrollView>
     </AbsoluteLayout>
