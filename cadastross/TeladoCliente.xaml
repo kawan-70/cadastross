@@ -53,13 +53,15 @@
                             Grid.Column="1"
                             FontSize="18"
                             WidthRequest="50"
-                            VerticalOptions="Center"/>
+                            VerticalOptions="Center"
+                            Clicked="cadastrar"/>
                     
                     <Button ImageSource="mais.png"
                             Grid.Column="2"
                             FontSize="18"
                             WidthRequest="50"
-                            VerticalOptions="Center"/>
+                            VerticalOptions="Center"
+                            Clicked="cadastrar"/>
                     
                     <Button ImageSource="menos.png"
                             Grid.Column="3"

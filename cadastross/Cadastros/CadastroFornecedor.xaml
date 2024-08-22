@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="cadastross.CadastroCliente"
+             x:Class="cadastross.CadastroFornecedor"
               Shell.NavBarIsVisible="false"
               BackgroundColor="#cedeeb">
 
@@ -9,15 +9,19 @@
 
                <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
 
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="60"/>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
                     <ColumnDefinition Width="Auto"/>
@@ -26,7 +30,7 @@
 
        
 
-            <Label Text="Cadastro dos produtos"
+            <Button Text="Cadastros dos Fornecedores"
                        FontSize="50" 
                        Grid.ColumnSpan="5"
                        HorizontalOptions="Center"
@@ -42,6 +46,7 @@
 
                 <Label Text="nome:"
                        FontSize="28" 
+                       Margin="20,20,20,0"
                        Grid.Row="1"
                        Grid.Column="0"
                        FontFamily="letras.ttf"/>
@@ -49,6 +54,7 @@
                 <Label Text="cpf:"
                        FontSize="28" 
                        Grid.Row="2"
+                        Margin="20,20,20,0"
                        Grid.Column="0"
                        FontFamily="letras.ttf"/>
 
@@ -56,25 +62,41 @@
                        FontSize="28" 
                        Grid.Row="3"
                        Grid.Column="0"
+                        Margin="0,20,20,0"
                        FontFamily="letras.ttf"/>
 
                 <Label Text="telefone:"
                        FontSize="28" 
                        Grid.Row="4"
                        Grid.Column="0"
+                        Margin="0,20,20,0"
+                       FontFamily="letras.ttf"/>
+
+                 <Label Text="cidade:"
+                       FontSize="28" 
+                       Grid.Row="5"
+                       Grid.Column="0"
+                       Margin="10,20,20,0"
+                       FontFamily="letras.ttf"/>
+
+                <Label Text="Estado:"
+                       FontSize="28" 
+                       Grid.Row="6"
+                       Grid.Column="0"
+                       Margin="10,20,20,0"
                        FontFamily="letras.ttf"/>
 
                    <Entry x:Name="nome"
                             Placeholder="digite seu nome"
                             FontSize="20"
-                            Margin="70,0,0,0"
+                            Margin="95,0,10,0"
                             Grid.Row="1"
                             Grid.ColumnSpan="1"/>
 
                     <Entry  x:Name="cpfEntry"
                             Placeholder="digite seu cpf"
                             FontSize="20"
-                            Margin="70,0,0,0"
+                            Margin="95,0,0,0"
                             HorizontalOptions="FillAndExpand"
                             Grid.Row="2"
                             Grid.Column="0"/>
@@ -82,7 +104,7 @@
                     <Entry  x:Name="endereçoEntry"
                             Placeholder="digite seu nome "
                             FontSize="20"
-                             Margin="100,0,0,0"
+                             Margin="95,0,0,0"
                             HorizontalOptions="FillAndExpand"
                             Grid.Row="3"
                             Grid.Column="0"/>
@@ -90,18 +112,46 @@
                     <Entry x:Name="EmailEntry"
                             Placeholder="digite o seu email"
                             FontSize="20"
-                            Margin="100,0,0,0"
+                            Margin="95,0,0,0"
                             HorizontalOptions="FillAndExpand"
                             Grid.Row="4"
                             Grid.Column="0"/>
 
-              <Button ImageSource="seta.png"
-                            FontSize="18"
-                            WidthRequest="50"
+                    <Entry x:Name="CidadeEntry"
+                            Placeholder="digite seu nome"
+                            FontSize="20"
+                            Margin="95,0,0,0"
+                            Grid.Row="5"
+                            Grid.ColumnSpan="1"/>
+
+                      <Entry x:Name="EstadoEntry"
+                            Placeholder="digite seu nome"
+                            FontSize="20"
+                            Margin="95,0,0,0"
+                            Grid.Row="6"
+                            Grid.ColumnSpan="1"/>
+
+
+              <Button Text="Salvar"
+                            FontSize="20"
+                            WidthRequest="100"
                             VerticalOptions="Center"
-                            Clicked="todevolta"
-                            Grid.Row="4"
-                            Grid.Column="5"/>
+                            BackgroundColor="Green"
+                            TextColor="Black"
+                            Grid.Row="7"
+                            Margin="200,0,0,0"
+                            Grid.Column="0"/>
+
+               <Button Text="Cancelar"
+                            FontSize="20"
+                            WidthRequest="100"
+                            BackgroundColor="Red"
+                            VerticalOptions="Center"
+                            TextColor="Black"
+                            Clicked="fornecedor"
+                            Grid.Row="7"
+                            Margin="0,0,110,0"
+                            Grid.Column="0"/>
 
               
       

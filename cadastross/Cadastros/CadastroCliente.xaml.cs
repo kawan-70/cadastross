@@ -16,7 +16,7 @@ namespace cadastross
         
       private void todevolta(object sender, EventArgs args)
 	{
-		Application.Current.MainPage = new Produto();
+		Application.Current.MainPage = new TeladoCliente();
     }
     }
 }

@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cadastross.CadastroMateria"
+              Shell.NavBarIsVisible="false"
+              BackgroundColor="#cedeeb">
+
+     <Grid>
+
+               <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+       
+
+            <Label Text="Nova Materia Prima"
+                       FontSize="50" 
+                       Grid.ColumnSpan="5"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       FontFamily="letras.ttf"/>
+
+                <Label Text="Id:"
+                       FontSize="28" 
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       Margin="0,60,0,0"
+                       FontFamily="letras.ttf"/>
+
+                <Label Text="nome:"
+                       FontSize="28" 
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       FontFamily="letras.ttf"/>
+
+                <Label Text="uniadeda:"
+                       FontSize="28" 
+                       Grid.Row="2"
+                       Grid.Column="0"
+                       FontFamily="letras.ttf"/>
+
+                <Label Text="valor:"
+                       FontSize="28" 
+                       Grid.Row="3"
+                       Grid.Column="0"
+                       FontFamily="letras.ttf"/>
+
+                <Label Text="tempo de proução:"
+                       FontSize="28" 
+                       Grid.Row="4"
+                       Grid.Column="0"
+                       FontFamily="letras.ttf"/>
+
+                   <Entry x:Name="nomeMateriaPrima"
+                            Placeholder="digite o nome da nova materia"
+                            FontSize="20"
+                            Margin="70,5,0,0"
+                            Grid.Row="1"
+                            Grid.ColumnSpan="1"/>
+
+                    <Entry  x:Name=""
+                            Placeholder="digite seu cpf"
+                            FontSize="20"
+                            Margin="70,5,0,0"
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Row="2"
+                            Grid.Column="0"/>
+
+                    <Entry  x:Name="endereçoEntry"
+                            Placeholder="digite seu nome "
+                            FontSize="20"
+                             Margin="100,5,0,0"
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Row="3"
+                            Grid.Column="0"/>
+
+                    <Entry x:Name="EmailEntry"
+                            Placeholder="digite o seu email"
+                            FontSize="20"
+                            Margin="100,5,0,0"
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Row="4"
+                            Grid.Column="0"/>
+
+              <Button ImageSource="seta.png"
+                            FontSize="20"
+                            WidthRequest="70"
+                            VerticalOptions="Center"
+                            Clicked="todevolta"
+                            Grid.Row="0"
+                            Grid.Column="3"/>
+
+              <Button Text="Salvar"
+                            FontSize="20"
+                            WidthRequest="100"
+                            VerticalOptions="Center"
+                            BackgroundColor="Green"
+                            TextColor="Black"
+                            Clicked="todevolta"
+                            Grid.Row="7"
+                            Margin="200,0,0,0"
+                            Grid.Column="0"/>
+
+               <Button Text="Cancelar"
+                            FontSize="20"
+                            WidthRequest="100"
+                            BackgroundColor="Red"
+                            VerticalOptions="Center"
+                            TextColor="Black"
+                            Clicked="todevolta"
+                            Grid.Row="7"
+                            Margin="0,0,110,0"
+                            Grid.Column="0"/>
+
+              
+      
+</Grid>
+
+</ContentPage>
