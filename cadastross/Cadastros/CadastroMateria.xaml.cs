@@ -16,7 +16,11 @@ namespace cadastross
         
       private void materia(object sender, EventArgs args)
 	{
-		Application.Current.MainPage = new Fornecedor();
+		Application.Current.MainPage = new MateriaPrima();
+    }
+    private void todevolta(object sender, EventArgs args)
+	{
+		Application.Current.MainPage = new MateriaPrima();
     }
     }
 }

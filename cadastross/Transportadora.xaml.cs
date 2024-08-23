@@ -12,5 +12,9 @@ namespace cadastross
 	{
 		Application.Current.MainPage = new MainPage();
     }
+      private void CadastroTRansportadora(object sender, EventArgs args)
+	{
+		Application.Current.MainPage = new CadastroTransportadora();
+    }
     }
 }

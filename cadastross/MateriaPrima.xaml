@@ -79,7 +79,7 @@
                 </Grid>
 
                
-                <Button Text="Bem Vindo ao Aetor do Cliente"
+                <Button Text="Bem Vindo ao cetorda Materia prima" 
                        FontSize="40"
                        BackgroundColor="#73181d"
                        Grid.Row="1"

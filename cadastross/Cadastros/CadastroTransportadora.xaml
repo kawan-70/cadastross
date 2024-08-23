@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="cadastross.CadastroMateria"
+             x:Class="cadastross.CadastroTransportadora"
               Shell.NavBarIsVisible="false"
               BackgroundColor="#cedeeb">
 
@@ -30,7 +30,7 @@
 
        
 
-            <Label Text="Nova Materia Prima"
+            <Label Text="Cadastro do Transportadora" 
                        FontSize="50" 
                        Grid.ColumnSpan="5"
                        HorizontalOptions="Center"
@@ -103,7 +103,7 @@
                             FontSize="20"
                             WidthRequest="70"
                             VerticalOptions="Center"
-                            Clicked="todevolta"
+                            Clicked="transportadora"
                             Grid.Row="0"
                             Grid.Column="3"/>
 
@@ -113,7 +113,6 @@
                             VerticalOptions="Center"
                             BackgroundColor="Green"
                             TextColor="Black"
-                            Clicked="todevolta"
                             Grid.Row="7"
                             Margin="200,0,0,0"
                             Grid.Column="0"/>
@@ -124,7 +123,7 @@
                             BackgroundColor="Red"
                             VerticalOptions="Center"
                             TextColor="Black"
-                            Clicked="materia"
+                            Clicked="transportadora"
                             Grid.Row="7"
                             Margin="0,0,110,0"
                             Grid.Column="0"/>

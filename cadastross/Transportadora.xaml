@@ -53,12 +53,15 @@
                             Grid.Column="1"
                             FontSize="18"
                             WidthRequest="50"
+
+                            Clicked="CadastroTRansportadora"
                             VerticalOptions="Center"/>
                     
                     <Button ImageSource="mais.png"
                             Grid.Column="2"
                             FontSize="18"
                             WidthRequest="50"
+                            Clicked="CadastroTRansportadora"
                             VerticalOptions="Center"/>
                     
                     <Button ImageSource="menos.png"
