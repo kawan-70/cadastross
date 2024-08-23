@@ -17,5 +17,9 @@ namespace cadastross
 		Application.Current.MainPage = new CadastroCliente();
     }
 
+ private void cadastroP(object sender, EventArgs args)
+	{
+		Application.Current.MainPage = new CadastroProduto();
+    }
     }
 }

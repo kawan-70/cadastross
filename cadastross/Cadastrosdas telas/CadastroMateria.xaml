@@ -44,68 +44,82 @@
                        Margin="0,60,0,0"
                        FontFamily="letras.ttf"/>
 
-                <Label Text="nome:"
+                <Label Text="Materia:"
                        FontSize="28" 
                        Grid.Row="1"
+                       Margin="0,20,0,0"
                        Grid.Column="0"
                        FontFamily="letras.ttf"/>
 
-                <Label Text="uniadeda:"
+                <Label Text="quantidade:"
                        FontSize="28" 
                        Grid.Row="2"
+                       Margin="0,20,0,0"
                        Grid.Column="0"
                        FontFamily="letras.ttf"/>
 
                 <Label Text="valor:"
                        FontSize="28" 
                        Grid.Row="3"
+                       Margin="0,25,0,0"
                        Grid.Column="0"
                        FontFamily="letras.ttf"/>
 
-                <Label Text="tempo de proução:"
+                <Label Text="tempo:"
                        FontSize="28" 
                        Grid.Row="4"
+                       Margin="0,25,0,0"
                        Grid.Column="0"
                        FontFamily="letras.ttf"/>
+
+              <Label Text="telefone:"
+                     FontSize="28" 
+                     Grid.Row="5"
+                     Margin="0,20,0,0"
+                     Grid.Column="0"
+                     FontFamily="letras.ttf"/>
 
                    <Entry x:Name="nomeMateriaPrima"
                             Placeholder="digite o nome da nova materia"
                             FontSize="20"
-                            Margin="70,5,0,0"
+                            Margin="130,5,0,0"
                             Grid.Row="1"
                             Grid.ColumnSpan="1"/>
 
-                    <Entry  x:Name="cpfentry"
-                            Placeholder="digite seu cpf"
+                    <Entry  x:Name="quantidadeentry"
+                            Placeholder="digite a quantidade da materia"
                             FontSize="20"
-                            Margin="70,5,0,0"
+                            Margin="130,5,0,0"
                             HorizontalOptions="FillAndExpand"
                             Grid.Row="2"
                             Grid.Column="0"/>
 
                     <Entry  x:Name="endereçoEntry"
-                            Placeholder="digite seu nome "
+                            Placeholder="digite o valor da produção"
                             FontSize="20"
-                             Margin="100,5,0,0"
+                             Margin="130,5,0,0"
                             HorizontalOptions="FillAndExpand"
                             Grid.Row="3"
                             Grid.Column="0"/>
 
                     <Entry x:Name="EmailEntry"
-                            Placeholder="digite o seu email"
+                            Placeholder="tempo de produção"
                             FontSize="20"
-                            Margin="100,5,0,0"
+                            Margin="130,5,0,0"
                             HorizontalOptions="FillAndExpand"
                             Grid.Row="4"
                             Grid.Column="0"/>
 
-              <Button ImageSource="seta.png"
+                            
+                     <Entry x:Name="telefoneentry"
+                            Placeholder="digite o seu numero:"
                             FontSize="20"
-                            WidthRequest="70"
-                            VerticalOptions="Center"
-                            Clicked="todevolta"
-                            Grid.Row="0"
-                            Grid.Column="3"/>
+                            Margin="130,5,0,0"
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Row="5"
+                            Grid.Column="0"/>
+
+
 
               <Button Text="Salvar"
                             FontSize="20"

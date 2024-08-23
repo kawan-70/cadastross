@@ -52,11 +52,13 @@
                             Grid.Column="1"
                             FontSize="18"
                             WidthRequest="50"
+                            Clicked="cadastroP"
                             VerticalOptions="Center"/>
                     
                     <Button ImageSource="mais.png"
                             Grid.Column="2"
                             FontSize="18"
+                            Clicked="cadastroP"
                             WidthRequest="50"
                             VerticalOptions="Center"/>
                     
@@ -98,22 +100,22 @@
                             HorizontalOptions="FillAndExpand"
                             Clicked="botâocadastrar"/>
 
-                    <Entry  Placeholder="digite seu nome"
+                     <Button Text="digite seu nome"
                             FontSize="20"
                             Margin="0,5"
                             HorizontalOptions="FillAndExpand"/>
 
-                    <Entry  Placeholder="digite seu nome"
+                     <Button Text="digite seu nome"
                             FontSize="20"
                             Margin="0,5"
                             HorizontalOptions="FillAndExpand"/>
 
-                    <Entry  Placeholder="digite seu nome"
+                     <Button Text="digite seu nome"
                             FontSize="20"
                             Margin="0,5"
                             HorizontalOptions="FillAndExpand"/>
 
-                    <Entry  Placeholder="digite seu nome"
+                     <Button Text="digite seu nome"
                             FontSize="20"
                             Margin="0,5"
                             HorizontalOptions="FillAndExpand"/>

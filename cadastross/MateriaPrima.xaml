@@ -55,12 +55,14 @@
                     <Button ImageSource="lapis.png"
                             Grid.Column="1"
                             FontSize="18"
+                            Clicked="cadastroM"
                             WidthRequest="50"
                             VerticalOptions="Center"/>
                     
                     <Button ImageSource="mais.png"
                             Grid.Column="2"
                             FontSize="18"
+                            Clicked="cadastroM"
                             WidthRequest="50"
                             VerticalOptions="Center"/>
                     

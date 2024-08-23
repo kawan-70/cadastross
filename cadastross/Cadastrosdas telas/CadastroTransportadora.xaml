@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cadastross.CadastroTransportadora"
+              Shell.NavBarIsVisible="false"
+              BackgroundColor="#cedeeb">
+
+     <Grid>
+
+               <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="60"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+       
+
+            <Label Text="Cadastro do Transportadora" 
+                       FontSize="50" 
+                       Grid.ColumnSpan="5"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       FontFamily="letras.ttf"/>
+
+                <Label Text="Id:"
+                       FontSize="28" 
+                       Grid.Row="0"
+                       Grid.Column="0"
+                       Margin="0,60,0,0"
+                       FontFamily="letras.ttf"/>
+
+                <Label Text="nome:"
+                       FontSize="28" 
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       Margin="5,20,0,0"
+                       FontFamily="letras.ttf"/>
+
+                <Label Text="Tempo:"
+                       FontSize="28" 
+                       Grid.Row="2"
+                       Margin="5,20,0,0"
+                       Grid.Column="0"
+                       FontFamily="letras.ttf"/>
+
+                <Label Text="quantidade:"
+                       FontSize="28" 
+                       Grid.Row="3"
+                       Margin="0,20,0,0"
+                       Grid.Column="0"
+                       FontFamily="letras.ttf"/>
+
+                <Label Text="valor:"
+                       Margin="7,20,0,0"
+                       FontSize="28" 
+                       Grid.Row="4"
+                       Grid.Column="0"
+                       FontFamily="letras.ttf"/>
+
+                   <Entry x:Name="nomeEntryT"
+                            Placeholder="digite o seu nome"
+                            FontSize="20"
+                            Margin="120,5,0,0"
+                            Grid.Row="1"
+                            Grid.ColumnSpan="1"/>
+
+                    <Entry  x:Name="tempoentry"
+                            Placeholder="digite o tempo estimado da corrida"
+                            FontSize="20"
+                            Margin="120,5,0,0"
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Row="2"
+                            Grid.Column="0"/>
+
+                    <Entry  x:Name="quantidadeEntry"
+                            Placeholder="digite a quantidade do produto "
+                            FontSize="20"
+                             Margin="120,5,0,0"
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Row="3"
+                            Grid.Column="0"/>
+
+                    <Entry x:Name="valorEntry"
+                            Placeholder="digite o valor da corrida"
+                            FontSize="20"
+                            Margin="120,5,0,0"
+                            HorizontalOptions="FillAndExpand"
+                            Grid.Row="4"
+                            Grid.Column="0"/>
+
+
+              <Button Text="Salvar"
+                            FontSize="20"
+                            WidthRequest="100"
+                            VerticalOptions="Center"
+                            BackgroundColor="Green"
+                            TextColor="Black"
+                            Grid.Row="7"
+                            Margin="200,0,0,0"
+                            Grid.Column="0"/>
+
+               <Button Text="Cancelar"
+                            FontSize="20"
+                            WidthRequest="100"
+                            BackgroundColor="Red"
+                            VerticalOptions="Center"
+                            TextColor="Black"
+                            Clicked="transportadora"
+                            Grid.Row="7"
+                            Margin="0,0,110,0"
+                            Grid.Column="0"/>
+
+              
+      
+</Grid>
+
+</ContentPage>
