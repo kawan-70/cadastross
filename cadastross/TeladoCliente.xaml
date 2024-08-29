@@ -5,7 +5,121 @@
              BackgroundColor="#000000">
 
 
-    <AbsoluteLayout>
+       <VerticalStackLayout>
+
+          <Grid Padding="10">
+         
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition Width="Auto"/>
+                </Grid.ColumnDefinitions>
+
+     
+                <Grid Grid.RowSpan="0"
+                      Grid.ColumnSpan="0"
+                      Grid.Column="3"
+                      VerticalOptions="Center"
+                      HorizontalOptions="FillAndExpand">
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+
+                    <SearchBar Placeholder="Pesquisar"
+                               Grid.Column="0"
+                               WidthRequest="250"
+                               HorizontalOptions="FillAndExpand"
+                               VerticalOptions="Center"/>
+                    
+                    <Button ImageSource="lapis.png"
+                            Grid.Column="1"
+                            FontSize="18"
+                            WidthRequest="50"
+                            VerticalOptions="Center"
+                            Clicked="cadastrar"/>
+                    
+                    <Button ImageSource="mais.png"
+                            Grid.Column="2"
+                            FontSize="18"
+                            WidthRequest="50"
+                            VerticalOptions="Center"
+                            Clicked="cadastrar"/>
+                    
+                    <Button ImageSource="menos.png"
+                            Grid.Column="3"
+                            FontSize="18"
+                            WidthRequest="50"
+                            Clicked="DeleteCliente"
+                            VerticalOptions="Center"/>
+                    
+                    <Button ImageSource="seta.png"
+                            Grid.Column="4"
+                            FontSize="18"
+                            WidthRequest="50"
+                            VerticalOptions="Center"
+                            Clicked="outodevolta"/>
+                </Grid>
+
+              <ListView x:Name="ListaClientes"
+                        HasUnevenRows="True"
+                        ItemSelected="QuandoSelecionarUmItemNaLista"
+                        HorizontalOptions="Fill"
+                        VerticalOptions="Fill">
+
+                     <ListView.ItemTemplate>
+                            <DataTemplate>
+                                   <ViewCell>
+                                          <VerticalStackLayout Padding="20"
+                                                               Margin="10,10,10,10"
+                                                               BackgroundColor="#f3e1fc">
+                                                 <HorizontalStackLayout>
+
+                                                  <Label Text="{Binding Id}"
+                                                               Margin="10,10,10,10"
+                                                               FontSize="20"/>
+
+                                                        <Label Text="{Binding Nome}"
+                                                               Margin="10,10,10,10"
+                                                               FontSize="20"/>
+
+                                                        <Label Text="{Binding Telefone}"
+                                                               Margin="10,10,10,10"
+                                                               FontSize="20"/>
+
+                                                        <Label Text="{Binding Data}"
+                                                               FontSize="20"
+                                                               Margin="10,10,10,10"/>
+
+                                                 </HorizontalStackLayout>
+                                          </VerticalStackLayout>
+                                   </ViewCell>
+                            </DataTemplate>
+                     </ListView.ItemTemplate>
+              </ListView>
+           </Grid>
+       </VerticalStackLayout>
+</ContentPage>
+
+
+
+
+
+ <!--<AbsoluteLayout>
 
       
         <ScrollView AbsoluteLayout.LayoutBounds="0,0,1,1"
@@ -67,6 +181,7 @@
                             Grid.Column="3"
                             FontSize="18"
                             WidthRequest="50"
+                            Clicked="DeleteCliente"
                             VerticalOptions="Center"/>
                     
                     <Button ImageSource="seta.png"
@@ -77,6 +192,13 @@
                             Clicked="outodevolta"/>
                 </Grid>
 
+                <Image Source="foiso.png"
+                       Aspect="AspectFit"
+                       Grid.Row="4"
+                       Grid.Column="3"
+                       Grid.ColumnSpan="2"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
                
                 <Button Text="Bem Vindo ao Aetor do Cliente"
                        FontSize="40"
@@ -129,18 +251,8 @@
                              HorizontalOptions="FillAndExpand"/>
                 </StackLayout>
 
-                <!-- Título da tela -->
-           
-
-                <Image Source="foiso.png"
-                       Aspect="AspectFit"
-                       Grid.Row="4"
-                       Grid.Column="3"
-                       Grid.ColumnSpan="2"
-                       HorizontalOptions="Center"
-                       VerticalOptions="Center"
-                       />
+              
             </Grid>
         </ScrollView>
     </AbsoluteLayout>
-</ContentPage>
+</ContentPage> -->

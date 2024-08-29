@@ -37,7 +37,7 @@ public class ClienteControle : ControleBase
 
   //----------------------------------------------------------------------------
 
-  public virtual void CriarOuAtualizar(Cliente cliente)
+  public virtual void CriarEAtualizar(Cliente cliente)
   {
     var collection = liteDB.GetCollection<Cliente>(NomeDaTabela);
     collection.Upsert(cliente);

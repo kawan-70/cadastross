@@ -68,7 +68,7 @@
                        Grid.Column="0"
                        FontFamily="letras.ttf"/>
 
-                   <Entry x:Name="nome"
+                   <Entry x:Name="Nnome"
                             Placeholder="digite seu nome"
                             FontSize="20"
                             Margin="70,5,0,0"
@@ -91,7 +91,7 @@
                             Grid.Row="3"
                             Grid.Column="0"/>
 
-                    <Entry x:Name="EmailEntry"
+                    <Entry x:Name="GmailEntry"
                             Placeholder="digite o seu email"
                             FontSize="20"
                             Margin="100,5,0,0"
@@ -106,7 +106,7 @@
                             VerticalOptions="Center"
                             BackgroundColor="Green"
                             TextColor="Black"
-                            Clicked="todevolta"
+                            Clicked="SalvarCliente"
                             Grid.Row="7"
                             Margin="200,0,0,0"
                             Grid.Column="0"/>
@@ -117,11 +117,12 @@
                             BackgroundColor="Red"
                             VerticalOptions="Center"
                             TextColor="Black"
-                            Clicked="todevolta"
+                            Clicked="Exluircancela"
                             Grid.Row="7"
                             Margin="0,0,110,0"
                             Grid.Column="0"/>
 
+              
               
       
 </Grid>
