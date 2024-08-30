@@ -1,16 +1,20 @@
+using Controles;
 using Microsoft.Maui.Controls;
+using Modelos;
 
 namespace cadastross
 {
-public partial class CadastroClientes : ContentPage
+public partial class CadastroCliente : ContentPage
     {
 
-        public Cliente cliente { get; set; }
+        Cliente cliente;
 
-        Controles.ClienteControle controleCliente = new Controles.ClienteControle();
-        public CadastroClientes()
+        ClienteControle clienteControle;
+        public CadastroCliente()
         {
             InitializeComponent();
+            cliente = new Cliente();
+            clienteControle = new ClienteControle();
         }
 
         protected override void OnAppearing()
@@ -21,7 +25,7 @@ public partial class CadastroClientes : ContentPage
             {
                 IdLabel.Text = cliente.Id.ToString();
 
-                Nnome.Text = cliente.Nome;
+                Name.Text = cliente.Nome;
 
                 cpfEntry.Text = cliente.Cpf;
 
@@ -36,7 +40,7 @@ public partial class CadastroClientes : ContentPage
         {
             IdLabel.Text = string.Empty;
 
-            Nnome.Text = string.Empty;
+            Name.Text = string.Empty;
 
             cpfEntry.Text = string.Empty;
             
@@ -54,20 +58,20 @@ public partial class CadastroClientes : ContentPage
                     cliente.Id = int.Parse(IdLabel.Text);
                 else
                 cliente.Id = 0;
-                cliente.Nome = Nnome.Text;
+                cliente.Nome = Name.Text;
 
                 cliente.Cpf = cpfEntry.Text;
 
                 cliente.Endereço = endereçoEntry.Text;
 
-                controleCliente.CriarEAtualizar(cliente);
+                clienteControle.CriarEAtualizar(cliente);
             }
             await DisplayAlert("Salvar", "Dados Salvos!", "OK");
         }
 
         private async Task<bool> VerificaSeDadosEstaoCorretos()
         {
-            if (String.IsNullOrEmpty(Nnome.Text))
+            if (String.IsNullOrEmpty(Name.Text))
             {
                 await DisplayAlert("Cadastrar", "o campo nome ainda esta embranco, preencha!", "OK");
                 return false;
@@ -93,9 +97,9 @@ public partial class CadastroClientes : ContentPage
                await DisplayAlert("Ops, Erro", "não a dados do cliente para excluir", "ok");
             else if (await DisplayAlert("Excluir","cliente sera excluido, tem certeza?","Excluir Cliente","cancelar"))
             {
-                controleCliente.Delete(cliente.Id);
+                clienteControle.Apagar(cliente.Id);
 
-                 Application.Current.MainPage = new ClientesTela();                 
+                 Application.Current.MainPage = new TeladoCliente();                 
             }
 
             
