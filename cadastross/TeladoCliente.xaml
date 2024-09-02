@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="cadastross.TeladoCliente"
-             BackgroundColor="#000000">
+             x:Class="cadastross.TeladoCliente">
 
 
       
@@ -31,16 +30,19 @@
                                HorizontalOptions="FillAndExpand"
                                VerticalOptions="Center"/>
                     
-                    <Button ImageSource="lapis.png"
+                     <Button ImageSource="lapis.png"
                             Grid.Column="1"
+                            Grid.Row="0"
                             FontSize="18"
                             WidthRequest="50"
                             VerticalOptions="Center"
                             Clicked="cadastrar"/>
                     
+                    
                     <Button ImageSource="mais.png"
                             Grid.Column="2"
                             FontSize="18"
+                            Grid.Row="0"
                             WidthRequest="50"
                             VerticalOptions="Center"
                             Clicked="cadastrar"/>
@@ -48,17 +50,34 @@
                     <Button ImageSource="menos.png"
                             Grid.Column="3"
                             FontSize="18"
-                            WidthRequest="50"
+                            Grid.Row="0"
                            
+                            WidthRequest="50"
+                            
                             VerticalOptions="Center"/>
                     
                     <Button ImageSource="seta.png"
                             Grid.Column="4"
                             FontSize="18"
+                            Grid.Row="0"
                             WidthRequest="50"
                             VerticalOptions="Center"
                             Clicked="outodevolta"/>
-                
+
+
+              <Button Text="Bem Vindo ao Aetor do Cliente"
+                       FontSize="40"
+                       BackgroundColor="#73181d"
+                       Grid.Row="1"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="5"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Start"
+                       FontFamily="letras.ttf"
+                       Margin="0,10,0,10"/>
+
+                  
+              
 
               <ListView x:Name="ListaClientes"
                         HasUnevenRows="True"
@@ -80,98 +99,54 @@
 
 
 
-                  <!--  <SearchBar Placeholder="Pesquisar"
-                               Grid.Column="0"
-                               WidthRequest="250"
-                               HorizontalOptions="FillAndExpand"
-                               VerticalOptions="Center"/>
-                    
-                    <Button ImageSource="lapis.png"
-                            Grid.Column="1"
-                            FontSize="18"
-                            WidthRequest="50"
-                            VerticalOptions="Center"
-                            Clicked="cadastrar"/>
-                    
-                    <Button ImageSource="mais.png"
-                            Grid.Column="2"
-                            FontSize="18"
-                            WidthRequest="50"
-                            VerticalOptions="Center"
-                            Clicked="cadastrar"/>
-                    
-                    <Button ImageSource="menos.png"
-                            Grid.Column="3"
-                            FontSize="18"
-                            WidthRequest="50"
-                            Clicked="DeleteCliente"
-                            VerticalOptions="Center"/>
-                    
-                    <Button ImageSource="seta.png"
-                            Grid.Column="4"
-                            FontSize="18"
-                            WidthRequest="50"
-                            VerticalOptions="Center"
-                            Clicked="outodevolta"/>
                 
-
-                <Image Source="foiso.png"
-                       Aspect="AspectFit"
-                       Grid.Row="4"
-                       Grid.Column="3"
-                       Grid.ColumnSpan="2"
+                
+                <Label Text="{Binding Id}"
+                       FontSize="15"
                        HorizontalOptions="Center"
-                       VerticalOptions="Center"/> -->
-               
-                <Button Text="Bem Vindo ao Aetor do Cliente"
-                       FontSize="40"
-                       BackgroundColor="#73181d"
-                       Grid.Row="1"
-                       Grid.Column="0"
-                       Grid.ColumnSpan="5"
+                       VerticalOptions="Center"
+                       Grid.ColumnSpan="3"
+                       Grid.RowSpan="3"/>
+
+
+                <Label Text="{Binding Name}"
+                       FontSize="15"
                        HorizontalOptions="Center"
-                       VerticalOptions="Start"
-                       FontFamily="letras.ttf"
-                       Margin="0,10,0,10"/>
+                       VerticalOptions="Center"
+                       Grid.ColumnSpan="3"
+                       Grid.RowSpan="3"/>
+
+
+
+                <Label Text="{Binding Cpf}"
+                       FontSize="15"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Grid.ColumnSpan="3"
+                       Grid.RowSpan="3"/>
+
+
+
+                <Label Text="{Binding Endereço}"
+                       FontSize="15"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Grid.ColumnSpan="3"
+                       Grid.RowSpan="3"/>
+
 
                 
-                
-
-                    <Button Text="digite seu nome"
-                            FontSize="20"
-                            Margin="0,5"
-                            BackgroundColor="#5c67e0"
-                            HorizontalOptions="FillAndExpand"/>
-                            
-
-                     <Button Text="digite seu nome"
-                            FontSize="20"
-                            BackgroundColor="#5c67e0"
-                            Margin="0,5"
-                            HorizontalOptions="FillAndExpand"/>
-
-                    <Button Text="digite seu nome"
-                            FontSize="20"
-                            BackgroundColor="#5c67e0"
-                            Margin="0,5"
-                            HorizontalOptions="FillAndExpand"/>
-
-                     <Button Text="digite seu nome"
-                            FontSize="20"
-                             BackgroundColor="#5c67e0"
-                            Margin="0,5"
-                            HorizontalOptions="FillAndExpand"/>
-
-                     <Button Text="digite seu nome"
-                             BackgroundColor="#5c67e0"
-                             FontSize="20"
-                             Margin="0,5"
-                             HorizontalOptions="FillAndExpand"/>
-                </HorizontalStackLayout>
-                                          </VerticalStackLayout>
-                                   </ViewCell>
-                            </DataTemplate>
+                <Label Text="{Binding Gmail}"
+                       FontSize="15"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"
+                       Grid.ColumnSpan="3"
+                       Grid.RowSpan="3"/>
+                                                      </HorizontalStackLayout>
+                                                </VerticalStackLayout>
+                                        </ViewCell>
+                               </DataTemplate>
                      </ListView.ItemTemplate>
               </ListView>
-           </Grid>
+         </Grid>
 </ContentPage>

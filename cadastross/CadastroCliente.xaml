@@ -28,7 +28,7 @@
                      <ColumnDefinition Width="Auto"/>
               </Grid.ColumnDefinitions>
 
-
+    
 
               <Label Text="Cadastro dos Cliente"
                      FontSize="50"
@@ -39,9 +39,33 @@
 
 
               <Label x:Name="IdLabel"
-                     Text=""
+                     Margin="5,0,0,10"
                      Grid.Row="1"
-                     Grid.Column="1"/>
+                     Grid.Column="0"/>
+
+               <Label FontSize="20"
+                     Text="Nome"
+                     Grid.Row="1"
+                     Margin="00,20,0,0"
+                     Grid.Column="0"/>
+
+               <Label FontSize="20"
+                     Text="cpf"
+                     Grid.Row="2"
+                     Margin="00,20,0,0"
+                     Grid.Column="0"/>
+
+               <Label FontSize="20"
+                     Text="endereço"
+                     Grid.Row="3"
+                     Margin="00,20,70,0"
+                     Grid.Column="0"/>
+
+                <Label FontSize="20"
+                     Text="Email"
+                     Margin="00,20,160,0"
+                     Grid.Row="4"
+                     Grid.Column="0"/>
 
               <Label Text="{Binding Id}"
                      HorizontalOptions="FillAndExpand"
@@ -50,14 +74,14 @@
               <Entry x:Name="Name"
                      Placeholder="digite seu nome"
                      FontSize="20"
-                     Margin="70,5,0,0"
+                     Margin="100,5,20,0"
                      Grid.Row="1"
                      Grid.ColumnSpan="1"/>
 
               <Entry  x:Name="cpfEntry"
                       Placeholder="digite seu cpf"
                       FontSize="20"
-                      Margin="70,5,0,0"
+                      Margin="100,5,0,0"
                       HorizontalOptions="FillAndExpand"
                       Grid.Row="2"
                       Grid.Column="0"/>
@@ -90,7 +114,8 @@
                       Margin="200,0,0,0"
                       Grid.Column="0"/>
 
-              <Button Text="Cancelar"
+             
+        <Button Text="Cancelar"
                       FontSize="20"
                       WidthRequest="100"
                       BackgroundColor="Red"
@@ -101,8 +126,13 @@
                       Margin="0,0,110,0"
                       Grid.Column="0"/>
 
-
-
+       <Button Text="volta"
+              FontSize="20"
+              WidthRequest="100"
+              VerticalOptions="Center"
+              Grid.Row="0"
+              Grid.Column="1"
+              Clicked="voltarr"/>
 
        </Grid>
 

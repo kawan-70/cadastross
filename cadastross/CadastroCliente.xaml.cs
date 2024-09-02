@@ -17,6 +17,13 @@ public partial class CadastroCliente : ContentPage
             clienteControle = new ClienteControle();
         }
 
+       private void voltarr(object sender, EventArgs args)
+	{
+		Application.Current.MainPage = new TeladoCliente();
+    }
+
+
+
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -65,8 +72,9 @@ public partial class CadastroCliente : ContentPage
                 cliente.Endereço = endereçoEntry.Text;
 
                 clienteControle.CriarEAtualizar(cliente);
+                await DisplayAlert("Salvar", "Dados Salvos!", "OK");
             }
-            await DisplayAlert("Salvar", "Dados Salvos!", "OK");
+            
         }
 
         private async Task<bool> VerificaSeDadosEstaoCorretos()
@@ -89,9 +97,7 @@ public partial class CadastroCliente : ContentPage
             else
                 return true;
         }
-
-
-        private async void Exluircancela(object sender, EventArgs e)  
+             private async void Exluircancela(object sender, EventArgs e)  
         {
             if (cliente == null || cliente.Id < 1)
                await DisplayAlert("Ops, Erro", "não a dados do cliente para excluir", "ok");
@@ -104,8 +110,6 @@ public partial class CadastroCliente : ContentPage
 
             
         }
-
-
     }
 
 }
