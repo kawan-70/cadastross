@@ -98,18 +98,12 @@
                                                                FontSize="20"/>
 
 
-
-                
-                
-                
-
-
                 <Label Text="{Binding Name}"
                        FontSize="15"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
-                       Grid.ColumnSpan="3"
-                       Grid.RowSpan="3"/>
+                       Grid.ColumnSpan="0"
+                       Grid.RowSpan="0"/>
 
 
 
@@ -117,8 +111,8 @@
                        FontSize="15"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
-                       Grid.ColumnSpan="3"
-                       Grid.RowSpan="3"/>
+                       Grid.ColumnSpan="0"
+                       Grid.RowSpan="2"/>
 
 
 
@@ -126,7 +120,7 @@
                        FontSize="15"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
-                       Grid.ColumnSpan="3"
+                       Grid.ColumnSpan="0"
                        Grid.RowSpan="3"/>
 
 
@@ -135,7 +129,7 @@
                        FontSize="15"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"
-                       Grid.ColumnSpan="3"
+                       Grid.ColumnSpan="0"
                        Grid.RowSpan="3"/>
                                                       </HorizontalStackLayout>
                                                 </VerticalStackLayout>
