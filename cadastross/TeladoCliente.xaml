@@ -101,7 +101,7 @@
 
                 
                 
-                <Label Text="{Binding Id}"
+                <Label Text="Id"
                        FontSize="15"
                        HorizontalOptions="Center"
                        VerticalOptions="Center"

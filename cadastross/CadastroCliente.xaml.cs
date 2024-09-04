@@ -7,10 +7,11 @@ namespace cadastross
 public partial class CadastroCliente : ContentPage
     {
 
-        Cliente cliente;
+        public Cliente cliente {get;set;}
 
-        ClienteControle clienteControle;
+       Controles.ClienteControle clienteControle = new Controles.ClienteControle();
         public CadastroCliente()
+        
         {
             InitializeComponent();
             cliente = new Cliente();
@@ -43,7 +44,7 @@ public partial class CadastroCliente : ContentPage
             }
         }
 
-        private void DeleteCliente(object sender, EventArgs e)
+         void DeleteCliente(object sender, EventArgs e)
         {
             IdLabel.Text = string.Empty;
 
@@ -56,7 +57,7 @@ public partial class CadastroCliente : ContentPage
             GmailEntry.Text = string.Empty;
         }
 
-        private async void SalvarCliente(object sender, EventArgs e)
+         async void SalvarCliente(object sender, EventArgs e)
         {
             if (await VerificaSeDadosEstaoCorretos())
             {
@@ -77,7 +78,7 @@ public partial class CadastroCliente : ContentPage
             
         }
 
-        private async Task<bool> VerificaSeDadosEstaoCorretos()
+         async Task<bool> VerificaSeDadosEstaoCorretos()
         {
             if (String.IsNullOrEmpty(Name.Text))
             {

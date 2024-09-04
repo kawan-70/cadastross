@@ -67,7 +67,7 @@
                      Grid.Row="4"
                      Grid.Column="0"/>
 
-              <Label Text="{Binding Id}"
+              <Label x:Name="Id"
                      HorizontalOptions="FillAndExpand"
                      Grid.Column="1"/>
 
